@@ -7,7 +7,7 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
-func TestTransfertx(t *testing.T) {
+func TestTransferTx(t *testing.T) {
 	store := NewStore(testDB)
 
 	account1 := CreateRandomAccount(t)
@@ -45,7 +45,7 @@ func TestTransfertx(t *testing.T) {
 		transfer := result.Transfer
 		require.NotEmpty(t, transfer)
 		require.Equal(t, account1.ID, transfer.FromAccountID)
-		require.Equal(account2.ID, transfer.ToAccountID)
+		require.Equal(t, account2.ID, transfer.ToAccountID)
 		require.Equal(t, amount, transfer.Amount)
 		require.NotZero(t, transfer.ID)
 		require.NotZero(t, transfer, transfer.CreatedAt)
