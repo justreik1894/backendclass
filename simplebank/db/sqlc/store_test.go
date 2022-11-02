@@ -23,7 +23,6 @@ func TestTransferTx(t *testing.T) {
 	results := make(chan TransferTxResult)
 
 	for i := 0; i < n; i++ {
-
 		go func() {
 			ctx := context.Background()
 			result, err := store.TransferTx(ctx, TransferTxParams{
