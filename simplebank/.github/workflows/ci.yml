@@ -34,7 +34,7 @@ name: ci-test
        id: go  
 
      - name: check out code into the go module directory
-       uses: actions/setup-go@v3
+       uses: actions/checkout-go@v3
 
      - name: Run migrations
        run: make migrateup 
