@@ -43,5 +43,3 @@ name: ci-test
 
      - name: Test
        run: make test
-
-       . 
